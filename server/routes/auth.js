@@ -54,7 +54,8 @@ router.post("/register", upload.single("profileImage"), async (req, res) => {
 
     /* Save the new User */
     await newUser.save();
-
+    // console.log(newUser);
+    
     /* Send a successful message */
     res
       .status(200)

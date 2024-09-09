@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Login.scss"
 import { setLogin } from "../redux/state";
 import { useDispatch } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import './LoginPage.css'
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -72,7 +72,9 @@ const LoginPage = () => {
           />
           <button type="submit">LOG IN</button>
         </form>
-        <a href="/register">Don't have an account? Sign In Here</a>
+        {/* <a href="/register">Don't have an account? Sign In Here</a> */}
+        <Link to={"/register"}>Already have an account? Log In Here</Link> 
+
       </div>
     </div>
   );
